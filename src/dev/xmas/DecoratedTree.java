@@ -2,7 +2,8 @@ package dev.xmas;
 
 public class DecoratedTree extends Tree implements ITree
 {
-    private static final String twigWithStar = "X*";
+    private static final String twigWithSphere = "o-";
+    static final char sphere = 'o';
 
     public DecoratedTree(int treeLevels)
     {
@@ -25,14 +26,14 @@ public class DecoratedTree extends Tree implements ITree
         {
             printTwigsAndStars(currentLevel);
         }
-        System.out.println(twig);
+        System.out.println(sphere);
     }
 
     private static void printTwigsAndStars(int twigsInRow)
     {
         for (int i = 0; i < twigsInRow; i++)
         {
-            System.out.print(twigWithStar);
+            System.out.print(twigWithSphere);
         }
     }
 }

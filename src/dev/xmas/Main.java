@@ -14,24 +14,36 @@ public class Main
 
     private static int getTreeLevels(String[] commandLineArguments)
     {
-        if (commandLineArguments.length > 0) {
-            return Integer.parseInt(commandLineArguments[0]);
-        }
-        else
+        int treeLevel = defaultTreeLevel;
+        if (commandLineArguments.length > 0)
         {
-            return defaultTreeLevel;
+            try
+            {
+                treeLevel =  Integer.parseInt(commandLineArguments[0]);
+            }
+            catch (Exception e)
+            {
+                System.out.println("Bitte eine Zahl für die Baumhöhe eingeben.");
+            }
         }
+        return treeLevel;
     }
 
     private static int getTreeType(String[] commandLineArguments)
     {
-        if (commandLineArguments.length > 1) {
-            return Integer.parseInt(commandLineArguments[1]);
-        }
-        else
+        int treeType = defaultTreeType;
+        if (commandLineArguments.length > 1)
         {
-            return defaultTreeType;
+            try
+            {
+                treeType = Integer.parseInt(commandLineArguments[1]);
+            }
+            catch (Exception e)
+            {
+                System.out.println("Bitte 0 oder 1 für den Baumtyp eingeben.");
+            }
         }
+        return treeType;
     }
 
     private static void printSelectedTree(int treeLevels, int treeType)

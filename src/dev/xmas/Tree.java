@@ -4,7 +4,7 @@ public class Tree implements ITree
 {
     static final char space = ' ';
     static final char star = '*';
-    static final char twig = 'X';
+    static final char twig = '-';
     static final char stem = 'I';
 
     public Tree(int treeLevels)
